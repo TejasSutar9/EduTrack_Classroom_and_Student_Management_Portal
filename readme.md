@@ -14,7 +14,7 @@ It provides REST APIs for CRUD operations and ensures:
 * Exception handling
 * Clean JSON responses
 
-This project is **backend-only** and designed for integration with any frontend (React / Angular / Vue).
+This project is **backend-only** and designed for integration with any frontend (React / Angular).
 
 ---
 
