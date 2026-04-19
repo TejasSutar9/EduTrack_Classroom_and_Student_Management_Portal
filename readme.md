@@ -33,27 +33,28 @@ This project is **backend-only** and designed for integration with any frontend 
 
 ## 📂 Project Structure
 
+## 📂 Project Structure
+
 ```
-EduTrack/
-├── src/main/java/com/edutrack
-│   ├── config/                  
-│   │   └── MongoConfig.java
-│   ├── controller/              
-│   │   └── BatchEntryController.java
-│   ├── entity/                  
-│   │   └── BatchEntry.java
-│   ├── exception/               
-│   │   ├── ResourceNotFoundException.java
-│   │   └── GlobalExceptionHandler.java
-│   ├── repository/              
-│   │   └── BatchEntryRepository.java
-│   ├── service/                 
-│   │   └── BatchEntryService.java
-│   └── EduTrackApplication.java 
-├── src/main/resources/
-│   └── application.properties   
-├── pom.xml                      
-└── .gitignore
+src/main/java/com/edutrack
+├── controller/
+│   └── BatchEntryController.java
+├── entity/
+│   └── BatchEntry.java
+├── exception/
+│   ├── ResourceNotFoundException.java
+│   └── GlobalExceptionHandler.java
+├── repository/
+│   └── BatchEntryRepository.java
+├── service/
+│   └── BatchEntryService.java
+└── EduTrackApplication.java
+
+src/main/resources/
+└── application.properties
+
+pom.xml
+.gitignore
 ```
 
 ---
