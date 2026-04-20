@@ -113,7 +113,7 @@ Example JSON:
 ```
 {
   "name": "Java Full Stack",
-  "fees": 5000
+  "fees": 9000
 }
 ```
 
