@@ -1,4 +1,4 @@
-# 🎓 EduTrack – Classroom & Batch Management Portal
+# 🎓 EduTrack – Classroom & Student Management Portal
 
 Java • Spring Boot • MongoDB • Maven
 
