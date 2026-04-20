@@ -1,4 +1,4 @@
-# 🎓 EduTrack – Classroom & Student Management Portal
+# 🎓 EduTrack – Classroom & Batch Management Portal
 
 Java • Spring Boot • MongoDB • Maven
 
@@ -6,15 +6,9 @@ Java • Spring Boot • MongoDB • Maven
 
 ## 🔹 Overview
 
-EduTrack is a backend system built with **Spring Boot** and **MongoDB** to manage classrooms and student batches efficiently.
+EduTrack is a backend application built using Spring Boot and MongoDB to manage classroom batches efficiently.
 
-It provides REST APIs for CRUD operations and ensures:
-
-* Data validation
-* Exception handling
-* Clean JSON responses
-
-This project is **backend-only** and designed for integration with any frontend (React / Angular).
+It provides REST APIs for performing CRUD operations on batch data and ensures structured backend architecture. This project is backend-focused and can be integrated with any frontend framework like React, Angular, or Vue.
 
 ---
 
@@ -33,20 +27,16 @@ This project is **backend-only** and designed for integration with any frontend 
 
 ## 📂 Project Structure
 
-## 📂 Project Structure
-
 ```
-src/main/java/com/edutrack
-├── controller/
-│   └── BatchEntryController.java
-├── entity/
+src/main/java/com/edutrack/portal
+├── Controller/
+│   ├── BatchEntryController.java
+│   └── HealthCheck.java
+├── Entity/
 │   └── BatchEntry.java
-├── exception/
-│   ├── ResourceNotFoundException.java
-│   └── GlobalExceptionHandler.java
-├── repository/
+├── Repository/
 │   └── BatchEntryRepository.java
-├── service/
+├── Service/
 │   └── BatchEntryService.java
 └── EduTrackApplication.java
 
@@ -61,47 +51,45 @@ pom.xml
 
 ## 🚀 Features
 
-* CRUD operations for Classroom/Batches
-* MongoDB integration for persistent storage
+* CRUD operations for managing classroom batches
+* MongoDB integration for reliable data storage
 * RESTful APIs for easy frontend integration
-* Global Exception Handling for clean error responses
-* Validation to prevent empty names or negative fees
+* Layered architecture (Controller → Service → Repository)
+* Health check API for application status
 
 ---
 
 ## 📌 API Endpoints
 
-| Method | Endpoint               | Description          |
-| ------ | ---------------------- | -------------------- |
-| GET    | `/api/batches`         | Get all batches      |
-| POST   | `/api/batches`         | Create a new batch   |
-| PUT    | `/api/batches/id/{id}` | Update a batch by ID |
-| DELETE | `/api/batches/id/{id}` | Delete a batch by ID |
-| DELETE | `/api/batches/all`     | Delete all batches   |
-
-✔ All endpoints return JSON responses with proper HTTP status codes.
+| Method | Endpoint          | Description              |
+| ------ | ----------------- | ------------------------ |
+| GET    | /api/batches      | Get all batches          |
+| POST   | /api/batches      | Create new batch         |
+| PUT    | /api/batches/{id} | Update batch             |
+| DELETE | /api/batches/{id} | Delete batch             |
+| GET    | /health           | Check application status |
 
 ---
 
 ## ⚙️ Installation & Run
 
-### 1. Clone the repository
+### 1. Clone Repository
 
 ```
-git clone https://github.com/YourUsername/edutrack-strudent-and-classroom-management.git
-cd edutrack-strudent-and-classroom-management/EduTrack
+git clone https://github.com/your-username/your-repo-name.git
+cd EduTrack
 ```
 
 ---
 
 ### 2. Configure MongoDB
 
-* Make sure MongoDB is running locally (default port: **27017**)
-* Database **edutrack** will be created automatically
+* Ensure MongoDB is running on default port **27017**
+* Database will be created automatically
 
 ---
 
-### 3. Build & Run
+### 3. Run Project
 
 ```
 mvn clean install
@@ -112,7 +100,7 @@ mvn spring-boot:run
 
 ### 4. Test APIs
 
-Use Postman or any REST client
+Use Postman or browser
 
 Base URL:
 
@@ -120,7 +108,7 @@ Base URL:
 http://localhost:8080/api/batches
 ```
 
-### Example POST Request
+Example JSON:
 
 ```
 {
@@ -131,38 +119,21 @@ http://localhost:8080/api/batches
 
 ---
 
-## 💡 Validation & Error Handling
-
-* Name cannot be empty
-* Fees must be positive
-* Invalid ID → 404 Not Found
-
-### Example Error Response
-
-```
-{
-  "error": "Batch not found with ID: 123"
-}
-```
-
----
-
 ## 📈 Future Enhancements
 
-* Add Student module with batch relationships
-* Add Spring Security for authentication & authorization
-* Add Frontend UI (React / Angular)
-* Implement report generation (CSV, Excel)
+* Add student management module
+* Implement validation and exception handling
+* Add authentication (Spring Security)
+* Build frontend UI
 
 ---
 
 ## 👨‍💻 Author
 
-**Tejas Sutar**
+**Tejas Pradip Sutar**
 
 ---
 
 ## ⭐ Conclusion
 
-EduTrack is a simple and efficient backend system demonstrating how **Spring Boot + MongoDB** can be used to build scalable classroom management solutions.
-
+EduTrack demonstrates how to build a structured backend system using Spring Boot and MongoDB for managing classroom batches efficiently.
